@@ -1,5 +1,8 @@
 body {
-  background-image: url("https://media.giphy.com/media/10X5oVBTgURLtC/giphy.gif~c200");
+  background-image: url("https://media.giphy.com/media/l46CBiAhHAkp79Cmc/giphy.gif");
+  background-repeat: no-repeat;
+  background-position: centre;
+  background-size: cover;
   font-family: Verdana;
   margin: 40px;
 }
@@ -8,9 +11,9 @@ canvas {
 }
 h1 {
   color: White;
-  text-align: justify;
+  text-align: center;
 }
 p{
   color: White;
-  text-align: justify;
+  text-align: center;
 }
