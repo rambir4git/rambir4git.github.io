@@ -7,32 +7,33 @@
 </head>
 <body>
 <!-- partial:index.partial.html -->
-<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js" >
+<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js">
 </script>
 <h1>Steganogrphy Web Page</h1>
 <p>
-Foreground/Input: <canvas id = "fgcan">
+  Foreground/Input: </p>
+<p><canvas id="fgcan">
 </canvas></p>
 <p>
-Background/Output: <canvas id = "bgcan">
-</canvas>
-</p>
+  Background/Output: </p>
+<p><canvas id="bgcan">
+  </canvas></p>
 <p>
-File1: <input type="file" multiple="false" accept="image/*" id="fgfile" onchange="loadForegroundImage()" >
-</p>
-
-<p>
-File2: <input type="file" multiple="false" accept="image/*" id="bgfile" onchange="loadBackgroundImage()" >
+  File1: <input type="file" multiple="false" accept="image/*" id="fgfile" onchange="loadForegroundImage()">
 </p>
 
 <p>
- Steganography: <input type="button" value="Hide Image" onClick="doSteganography()">
-  </p>
+  File2: <input type="file" multiple="false" accept="image/*" id="bgfile" onchange="loadBackgroundImage()">
+</p>
+
 <p>
-Reverse Steganography: <input type="button" value="Show Image" onclick="doReverseSteganography()" >
-  </p>
+  Steganography: <input type="button" value="Hide Image" onClick="doSteganography()">
+</p>
 <p>
-Clear Screen: <input type="button" value="Clear" onclick="clearCanvas()" >
+  Reverse Steganography: <input type="button" value="Show Image" onclick="doReverseSteganography()">
+</p>
+<p>
+  Clear Screen: <input type="button" value="Clear" onclick="clearCanvas()">
 </p>
 <br>
 <br>
