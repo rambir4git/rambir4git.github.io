@@ -1,25 +1,17 @@
 var fgImage = null;
 var bgImage = null;
-var fgCanvas = document.getElementById("fgcan");
+var fgCanvas = document.getElementById("fgdcan");
 var bgCanvas = document.getElementById("bgcan");
-
-function canvasHandler(string, canvas) {
-  var ctx = canvas.getContext("2d");
-  ctx.font = "10dp Aerial";
-  ctx.fillText(string, 5, 5);
-}
 
 function loadForegroundImage() {
   var file = document.getElementById("fgfile");
   fgImage = new SimpleImage(file);
   fgImage.drawTo(fgCanvas);
-  canvasHandler("Foreground", fgCanvas);
 }
 
 function loadBackgroundImage() {
   var file = document.getElementById("bgfile");
   bgImage = new SimpleImage(file);
-  canvasHandler("Background", bgCanvas);
   bgImage.drawTo(bgCanvas);
 }
 
