@@ -9,8 +9,8 @@
 <!-- partial:index.partial.html -->
 <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js">
 </script>
-<h1>Steganogrphy Web Page</h1>
-<p>You can hide one image into another one. If originals load normally but result is not displayed after you press a button, chances are images are not suitable for Steganography. It a experimental project you can keep trying with different images. ----Rambir
+<h1>Steganography Web Page</h1>
+<p>You can hide one image into another one. Step1: Upload two images then press 'Hide Image' button and wait. Process: This will create a similar looking image with secret image hidden in it. Step2: Press 'Show Image' button and wait. Process: It will regenerate original images from single image generated after step1. ---Rambir
 <p>
   Foreground/Input: </p>
 <p><canvas id="fgcan">
@@ -36,8 +36,9 @@
 <p>
   Clear Screen: <input type="button" value="Clear" onclick="clearCanvas()">
 </p>
-<br>
-<br>
+<p>
+  Some bugs: If originals load normally but disappear after you press a button, chances are images are not suitable for Steganography. Try with different images. If button remains pressed, it means script is still running wait afew seoconds.
+</p>
 <!-- partial -->
   <script  src="./script.js"></script>
 
