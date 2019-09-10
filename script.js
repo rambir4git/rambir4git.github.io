@@ -1,6 +1,6 @@
 var fgImage = null;
 var bgImage = null;
-var fgCanvas = document.getElementById("fgdcan");
+var fgCanvas = document.getElementById("fgcan");
 var bgCanvas = document.getElementById("bgcan");
 
 function loadForegroundImage() {
