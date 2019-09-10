@@ -3,6 +3,12 @@ var bgImage = null;
 var fgCanvas = document.getElementById("fgcan");
 var bgCanvas = document.getElementById("bgcan");
 
+function canvasHandler(string, canvas) {
+  var ctx = canvas.getContext("2d");
+  ctx.font = "10dp Aerial";
+  ctx.fillText(string, 5, 5);
+}
+
 function loadForegroundImage() {
   var file = document.getElementById("fgfile");
   fgImage = new SimpleImage(file);
