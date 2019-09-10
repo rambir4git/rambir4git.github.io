@@ -1,0 +1,16 @@
+body {
+  background-image: url("https://media.giphy.com/media/10X5oVBTgURLtC/giphy.gif~c200");
+  font-family: Verdana;
+  margin: 40px;
+}
+canvas {
+  border: 5px solid white;
+}
+h1 {
+  color: White;
+  text-align: justify;
+}
+p{
+  color: White;
+  text-align: justify;
+}
