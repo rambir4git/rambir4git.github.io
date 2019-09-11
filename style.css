@@ -1,13 +1,14 @@
 body {
-  background-image: url("https://media.giphy.com/media/l46CBiAhHAkp79Cmc/giphy.gif");
+  background-image: url("https://media.giphy.com/media/OK5LK5zLFfdm/giphy.gif");
   background-repeat: no-repeat;
   background-position: centre;
   background-size: cover;
   font-family: Verdana;
-  margin: 40px;
+  margin: 40pt;
 }
 canvas {
   border: 5px solid white;
+  height: 200pt;
 }
 h1 {
   color: White;
@@ -16,4 +17,8 @@ h1 {
 p{
   color: White;
   text-align: center;
+  font-size: 12pt;
+}
+input {
+  font-size: 18pt;
 }
