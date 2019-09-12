@@ -17,8 +17,29 @@ h1 {
 p{
   color: White;
   text-align: center;
-  font-size: 12pt;
+  font-size: 18pt;
 }
 input {
   font-size: 18pt;
+}
+ol{
+  font-size: 12pt;
+  color: white;
+}
+ul{
+  font-size: 12pt;
+  color: powderblue;
+}
+#bugs{
+  font-size: 12pt;
+  color: red;
+  }
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+  padding: 40px;
 }
