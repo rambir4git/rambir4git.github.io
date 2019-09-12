@@ -1,5 +1,5 @@
 body {
-  background-image: url("https://media.giphy.com/media/OK5LK5zLFfdm/giphy.gif");
+  background-image: url("https://media.giphy.com/media/l396BoOTIFem9xqQU/giphy.gif");
   background-repeat: no-repeat;
   background-position: centre;
   background-size: cover;
@@ -12,26 +12,19 @@ canvas {
 }
 h1 {
   color: White;
-  text-align: center;
+  text-align: centre;
 }
 p{
   color: White;
-  text-align: center;
-  font-size: 18pt;
+  text-align: justify;
+  font-size: 14px;
 }
 input {
-  font-size: 18pt;
-}
-ol{
-  font-size: 12pt;
-  color: white;
-}
-ul{
-  font-size: 12pt;
-  color: powderblue;
+  font-size: 14px;
+  margin: 10px;
 }
 #bugs{
-  font-size: 12pt;
+  font-size: 10px;
   color: red;
   }
 
@@ -41,5 +34,5 @@ ul{
 
 .column {
   flex: 50%;
-  padding: 40px;
+  padding: 20px;
 }

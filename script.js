@@ -62,14 +62,6 @@ function steno() {
   }
   fgImage.drawTo(fgCanvas);
   output.drawTo(bgCanvas);
-  
-  ReImg.fromCanvas(bgCanvas).toPng();
-  
-  var link = document.getElementById('link');
-  link.setAttribute('download', 'SteganographedOutput.png');
-  link.setAttribute('href', bgCanvas.toDataURL("image/png").replace("image/png", "image/octet-stream"));
-  link.click();
-  
   fgImage = output;
 }
 
