@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Steno web page</title>
   <link rel="stylesheet" href="./style.css">
+
 </head>
 <body>
 <!-- partial:index.partial.html -->
@@ -13,27 +14,23 @@
 <p>Hide one image in another image and generate original images back.</p>
 <div class="row">
   <div class="column">
-<p>
-  Base image: </p>
-<p><canvas id="fgcan">
-</canvas></p>
-    <p>
+<p id="fgpara">Input1: Base image:</p>
+<p><canvas id="fgcan" style="display:none">
+</canvas>
   <input type="file" multiple="false" accept="image/*" id="fgfile" onchange="loadForegroundImage()">
 </p>
   </div>
   <div class="column">
-    <p>
-  Hidden image: </p>
-<p><canvas id="bgcan">
-  </canvas></p>
-    <p>
+    <p id="bgpara">Input2: Secret image: </p>
+<p><canvas id="bgcan" style="display:none">
+  </canvas>
   <input type="file" multiple="false" accept="image/*" id="bgfile" onchange="loadBackgroundImage()">
 </p>
     </div>
-  </div>
-  <input type="button" value="Hide Secret Image" onClick="doSteganography()" id="stenobtn">
-<input type="button" value="Show Secret Image" onclick="doReverseSteganography()" id="rstenobtn">
-<input type="button" value="Clear" onclick="clearCanvas()">
+</div>
+    <input type="button" value="Steganography" onClick="doSteganography()" id="stenobtn">
+    <input type="button" value="Reverse Steganography" onclick="doReverseSteganography()" id="rstenobtn">
+    <input type="button" value="Clear" onclick="clearCanvas()">
 <p id="bugs">
   PLEASE NOTE: If originals load normally but disappear after you press a button, chances are images are not suitable for Steganography. Try with different images.
 </p>

@@ -2,16 +2,20 @@ var fgImage = null;
 var bgImage = null;
 var fgCanvas = document.getElementById("fgcan");
 var bgCanvas = document.getElementById("bgcan");
+var fgPara = document.getElementById("fgpara");
+var bgPara = document.getElementById("bgpara");
 
 function loadForegroundImage() {
   var file = document.getElementById("fgfile");
   fgImage = new SimpleImage(file);
+  fgCanvas.style.display="block";
   fgImage.drawTo(fgCanvas);
 }
 
 function loadBackgroundImage() {
   var file = document.getElementById("bgfile");
   bgImage = new SimpleImage(file);
+  bgCanvas.style.display="block";
   bgImage.drawTo(bgCanvas);
 }
 
@@ -56,13 +60,22 @@ function steno() {
   for (var fgPixel of fgImage.values()) {
     var x = fgPixel.getX();
     var y = fgPixel.getY();
-    var bgPixel = bgImage.getPixel(x, y);
+    if(x>=bgImage.getWidth()||y>=bgImage.getHeight()){
+      var bgPixel = fgImage.getPixel(x, y);
+    }
+    else{
+      var bgPixel = bgImage.getPixel(x, y);
+    }
     var outPixel = output.getPixel(x, y);
     stenoPixel(fgPixel, bgPixel, outPixel);
   }
+  fgCanvas.style.display="block";
+  bgCanvas.style.display="block";
   fgImage.drawTo(fgCanvas);
   output.drawTo(bgCanvas);
+  bgPara.innerHTML="Output1: Hidden image"
   fgImage = output;
+  alert("Steganography successfull !!");
 }
 
 function reverseSteno() {
@@ -77,32 +90,49 @@ function reverseSteno() {
     highPixel(fgPixel, fgOutPixel);
     lowPixel(fgPixel, bgOutPixel);
   }
+  fgCanvas.style.display="block";
+  bgCanvas.style.display="block";
   fgoutput.drawTo(fgCanvas);
   bgoutput.drawTo(bgCanvas);
+  fgPara.innerHTML="Output1: Base image";
+  bgPara.innerHTML="Output2: Secret image";
+  alert("Reverse Steganography successfull !!");
 }
 
 function doSteganography() {
-  if (fgImage == null || !fgImage.complete()) {
-    alert("Load image in file1");
-  }
-  if (bgImage == null || !bgImage.complete()) {
-    alert("Load image in file2");
-  }
   clearCanvas();
-  steno();
+  if (fgImage == null || !fgImage.complete()) {
+    alert("Load base image !!");
+  }
+  else if (bgImage == null || !bgImage.complete()) {
+    alert("Load secret image !!");
+  }
+  else if ((fgImage.getWidth()<bgImage.getWidth())&&(fgImage.getHeight()<bgImage.getWidth())) {
+    alert("Base image is too small, may or may not work !!");
+  }
+ else {
+   steno();
+ }
 }
 
 function doReverseSteganography() {
   if (fgImage == null || !fgImage.complete()) {
-    alert("Load image in file1");
+    alert("Load steganographed image !!");
   }
-  clearCanvas();
-  reverseSteno();
+  else{
+    clearCanvas();
+    reverseSteno();
+  }
 }
 
 function clearCanvas() {
+  fgCanvas.style.display="none";
+  bgCanvas.style.display="none";
   doClear(fgCanvas);
   doClear(bgCanvas);
+  fgPara.innerHTML="Input1: Base image:";
+  bgPara.innerHTML="Input2: Secret image:";
+
 }
 
 function doClear(canvas) {
